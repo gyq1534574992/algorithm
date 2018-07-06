@@ -1,0 +1,23 @@
+public class dichotomy{
+	  public int find(int a){
+		  int[] test = {1,4,12,54,63,89,99};
+          int min = 0;
+          int max = test.length - 1;
+          int mid;
+          while (min <= max) {
+        	  mid = ( min + max )/2;
+          if ( a == test[mid] ){
+              return mid + 1;
+          }else if ( a < test[mid]){
+             max = mid - 1 ;
+          }else {
+               min = mid + 1 ;
+          }
+        }
+          return -1;
+     }
+     public static void main(String[] args){
+    	 dic one = new dic(); 
+    	 System.out.println(one. find(1));
+      }
+}
